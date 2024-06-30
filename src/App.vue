@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-center text-primary mt-5">Todo List</h1>
+    <h1 class="text-center text-primary mt-5">Todo Lists</h1>
     <div class="container">
       <AddButton />
       <SelectBoxVue/>
@@ -8,7 +8,7 @@
         <div @dblclick="toggle(data)" class=" mb-3">
           <CCard class="border border-primary">
             <CCardBody :class="complete(data)">
-              <div  class="">{{ data.title }} <span @click="deleTodo(data.id)" class="float-end text-danger material-symbols-outlined">
+              <div  class="">{{ data?.title }} <span @click="deleTodo(data?.id)" class="float-end text-danger material-symbols-outlined">
                   <button class="btn btn-danger font-5">cancel</button>
                 </span> </div>
             </CCardBody>
